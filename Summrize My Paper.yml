@@ -1,0 +1,161 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: chat
+  name: Summrize My Paper
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/openai:0.2.6@e2665624a156f52160927bceac9e169bd7e5ae6b936ae82575e14c90af390e6e
+    version: null
+kind: app
+model_config:
+  agent_mode:
+    enabled: false
+    max_iteration: 10
+    strategy: function_call
+    tools: []
+  annotation_reply:
+    enabled: false
+  chat_prompt_config: {}
+  completion_prompt_config: {}
+  dataset_configs:
+    datasets:
+      datasets: []
+    retrieval_model: multiple
+    top_k: 4
+  dataset_query_variable: ''
+  external_data_tools: []
+  file_upload:
+    allowed_file_extensions:
+    - .JPG
+    - .JPEG
+    - .PNG
+    - .GIF
+    - .WEBP
+    - .SVG
+    - .MP4
+    - .MOV
+    - .MPEG
+    - .WEBM
+    allowed_file_types: []
+    allowed_file_upload_methods:
+    - remote_url
+    - local_file
+    enabled: false
+    image:
+      detail: high
+      enabled: false
+      number_limits: 3
+      transfer_methods:
+      - remote_url
+      - local_file
+    number_limits: 3
+  model:
+    completion_params:
+      stop: []
+    mode: chat
+    name: gpt-4.1-mini
+    provider: langgenius/openai/openai
+  more_like_this:
+    enabled: false
+  opening_statement: Hey there! You can give me the abstract of your article and i
+    will generate its one-line summary in the blink of an eye!
+  pre_prompt: 'SYSTEM:
+
+    You are a concise scientific summarizer. Follow these steps exactly:
+
+    1) Read the provided abstract fully.
+
+    2) Identify the paper’s main result or highest-impact takeaway.
+
+    3) Produce exactly one short sentence that states that result or takeaway.
+
+    4) Keep the sentence compact (aim ≤20 words).
+
+    5) Do not add citations, bullets, or extra commentary. Output only the sentence.
+
+
+    If the abstract lacks a clear central result, return a single short descriptive
+    sentence such as "Abstract describes background and hypotheses; no single main
+    result stated."
+
+
+    RULES:
+
+    • One sentence only. No newlines.
+
+    • Prefer direct factual wording; avoid invention.
+
+    • If details are necessary to convey the claim (e.g., percentage, model name),
+    include them briefly.
+
+    • If you cannot extract a claim, use the brief descriptive fallback above.
+
+
+    FEW-SHOT EXAMPLES (style guidance only):
+
+
+    Example 1:
+
+    User message (abstract): "We trained a diffusion-based generative model on a curated
+    set of 12 million molecule–property pairs and evaluated it on four pharmacokinetic
+    benchmarks. Compared with prior state-of-the-art methods, our model reduced mean
+    absolute error by 18% and improved rank correlation across metrics. We provide
+    ablation studies showing the importance of a property-conditioned noise schedule."
+
+    One-line: "A diffusion model trained on 12M molecule–property pairs achieves state-of-the-art
+    pharmacokinetic prediction across multiple benchmarks."
+
+
+    Example 2:
+
+    User message (abstract): "Using a high-throughput CRISPR–Cas9 screen, we profiled
+    1,500 EGFR variants for drug response in cultured lung cancer cells. The L861Q
+    substitution consistently increased sensitivity to three clinically used EGFR
+    inhibitors across replicate assays. Mechanistic follow-up implicated altered ATP-binding
+    dynamics as the likely cause."
+
+    One-line: "EGFR L861Q substitution consistently increases sensitivity to multiple
+    EGFR inhibitors in vitro."
+
+
+    Example 3:
+
+    User message (abstract): "In a randomized preclinical study, mice received a candidate
+    mRNA vaccine or control and were challenged with the target virus. Vaccinated
+    mice showed 95% protection and a 100-fold reduction in viral load compared with
+    controls (p<0.001). Histopathology also revealed reduced lung inflammation in
+    the vaccine group."
+
+    One-line: "An mRNA vaccine candidate provides 95% protection in mice and reduces
+    viral load 100-fold."
+
+
+
+    USER INPUT:
+
+    Abstract: {abstract}
+
+    Produce the one-line summary now.'
+  prompt_type: simple
+  retriever_resource:
+    enabled: true
+  sensitive_word_avoidance:
+    configs: []
+    enabled: false
+    type: ''
+  speech_to_text:
+    enabled: false
+  suggested_questions: []
+  suggested_questions_after_answer:
+    enabled: false
+  text_to_speech:
+    enabled: false
+    language: ''
+    voice: ''
+  user_input_form: []
+version: 0.4.0
