@@ -39,7 +39,7 @@ title: Summarizer Chatbot
       </details>
 
       <div class="meta-footer">
-        <small>Made with ❤️ by Ali Hazrati· GitHub Pages</small>
+        <small>Made with ❤️ by Ali Hazrati · GitHub Pages</small>
       </div>
     </div>
   </aside>
@@ -264,6 +264,7 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   });
 })();
 </script>
+
 
 
 
