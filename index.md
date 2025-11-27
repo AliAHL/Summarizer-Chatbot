@@ -7,8 +7,8 @@ title: Chatbot
   <div class="brand">
     <div class="logo" aria-hidden="true">🤖</div>
     <div>
-      <h1>Udify Chat</h1>
-      <p class="tag">Ask anything — voice & text supported</p>
+      <h1>Dify Chatbot</h1>
+      <p class="tag">Summrize Articles — Just Ask!</p>
     </div>
   </div>
 
@@ -24,11 +24,10 @@ title: Chatbot
   <aside class="meta" id="metaPanel" aria-hidden="false">
     <div class="meta-inner">
       <h2>About this bot</h2>
-      <p>Voice-enabled assistant hosted on Udify. Helpful for quick research, debugging, and casual chat. Uses microphone permission if you allow it.</p>
+      <p>Summarizing assistant hosted on Udify. Helpful for knowing what kind of articles you're about to read. You just need to copy and paste the abstract of the article</p>
 
       <h3>Quick tips</h3>
       <ul>
-        <li>Click the mic icon inside the chat to speak.</li>
         <li>Use the theme toggle for dark/light modes.</li>
         <li>On mobile, tap the floating button to open this panel.</li>
       </ul>
@@ -265,6 +264,7 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   });
 })();
 </script>
+
 
 
 
